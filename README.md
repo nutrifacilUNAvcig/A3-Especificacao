@@ -23,8 +23,100 @@ Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriF
    - Consulte [Como escrever um bom README para seu projeto do GitHub](https://www.freecodecamp.org/portuguese/news/como-escrever-um-bom-arquivo-readme-para-seu-projeto-do-github/).
 
 3. **Testes & Cenários Gherkin**  
-   - Crie no mínimo **5 cenários** para testes de funcionalidade ou usabilidade.  
-   - 
+   - Crie, no mínimo, **5 cenários** para serem usados para testes de funcionalidade.  
+   - Faça teste de usabilidade
+      - Defina 5 metas:
+        -  Ex.: “O usuário deve conseguir configurar seu plano em ≤ 3 minutos”
+
+      - Escolha os participantes
+
+        - Perfis representativos (novos e experientes).
+
+        - Ideal: 5 a 8 usuários para cobrir ~85% dos problemas de usabilidade.
+        - Utilize o template a seguir para a aplicação do teste.
+
+          # 📝 Template de Registro de Teste de Usabilidade
+
+            > **Instruções para o moderador:** entregue este formulário ao participante antes do teste.  
+            > Peça que ele pense em voz alta enquanto executa cada tarefa e anote suas impressões.
+            
+            ---
+            
+            ## 1. Dados do Participante
+            
+            - **Nome / Código:**  
+            - **Perfil (ex.: iniciante / avançado):**  
+            - **Data:**  
+            - **Moderador:**  
+            - **Dispositivo / Navegador:**  
+            
+            ---
+            
+            ## 2. Objetivos do Teste
+            
+            1. Avaliar a facilidade de seleção de dieta  
+            2. Medir o tempo para preencher dados pessoais  
+            3. Verificar a clareza do plano alimentar gerado  
+            4. (Outros objetivos específicos…)
+            
+            ---
+            
+            ## 3. Tarefas (Preencher durante o teste)
+            
+            | Nº | Descrição da Tarefa                                         | Tempo Alvo | Tempo Real (s) | Sucesso (S/N) | Erros / Dificuldades                              | Observações do Usuário                            |
+            |----|-------------------------------------------------------------|------------|----------------|---------------|---------------------------------------------------|---------------------------------------------------|
+            | 1  | Selecionar a dieta “Low Carb”                               | 30 s       |                |               |                                                   |                                                   |
+            | 2  | Informar peso, altura, idade e sexo                         | 60 s       |                |               |                                                   |                                                   |
+            | 3  | Escolher 3 alimentos preferidos em cada categoria           | 45 s       |                |               |                                                   |                                                   |
+            | 4  | Gerar o plano alimentar e visualizar as recomendações       | 15 s       |                |               |                                                   |                                                   |
+            | 5  | Identificar onde registrar alergias/intolerâncias           | 30 s       |                |               |                                                   |                                                   |
+            
+            > *Adapte este quadro para incluir outras tarefas do seu projeto.*
+            
+            ---
+            
+            ## 4. Métricas de Satisfação
+            
+            Para cada critério, marque de **1 (muito ruim)** a **5 (excelente)**:
+            
+            | Critério                      | Nota (1–5) | Comentários                                  |
+            |-------------------------------|------------|-----------------------------------------------|
+            | Facilidade de navegação       |            |                                               |
+            | Clareza das instruções        |            |                                               |
+            | Velocidade de resposta        |            |                                               |
+            | Layout e design               |            |                                               |
+            | Confiança ao usar a ferramenta|            |                                               |
+            
+            ---
+            
+            ## 5. Feedback Aberto
+            
+            - **O que você mais gostou?**  
+              _Ex.: “As cores ajudam a identificar rapidamente as seções.”_
+            
+            - **O que você achou mais difícil?**  
+              _Ex.: “Não encontrei onde inserir intolerâncias.”_
+            
+            - **Sugestões de melhoria:**  
+              _Ex.: “Colocar tooltip explicando cada campo de entrada.”_
+            
+            ---
+            
+            ## 6. Conclusões do Moderador
+            
+            - **Principais bloqueios encontrados:**  
+              1. …  
+              2. …
+            
+            - **Pontos fortes observados:**  
+              1. …  
+              2. …
+            
+            - **Recomendações para próxima iteração:**  
+              1. …  
+              2. …
+            
+            ---
 
 4. **Apresentação**  
    - Pasta `slides/` com arquivo de apresentação (PowerPoint, PDF ou Google Slides).  
