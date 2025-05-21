@@ -23,19 +23,20 @@ Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriF
    - Consulte [Como escrever um bom README para seu projeto do GitHub](https://www.freecodecamp.org/portuguese/news/como-escrever-um-bom-arquivo-readme-para-seu-projeto-do-github/).
 
 3. **Testes**  
-   - Descreva, no mínimo, **5 funcionalidades com cenários** e faça teste de usabilidade usando o template.
-  
-   - ## 🧪 Cenário em Gherkin (exemplos)
-
-   ```gherkin
-   Funcionalidade: Seleção de Dieta
+   - Teste de Funcionalidade
+      - Descreva, no mínimo, **5 funcionalidades com cenários** e faça teste de usabilidade usando o template.
+     
+      - ## 🧪 Cenário em Gherkin (exemplos)
    
-     Cenário: Usuário escolhe dieta Mediterrânea
-       Dado que o usuário seleciona a dieta "Mediterrânea"
-       E informa peso "70", altura "170", idade "30" e sexo "Feminino"
-       Quando solicita o plano alimentar
-       Então o sistema deve sugerir refeições com azeite, peixes e grãos integrais
-   ```
+      ```gherkin
+      Funcionalidade: Seleção de Dieta
+      
+        Cenário: Usuário escolhe dieta Mediterrânea
+          Dado que o usuário seleciona a dieta "Mediterrânea"
+          E informa peso "70", altura "170", idade "30" e sexo "Feminino"
+          Quando solicita o plano alimentar
+          Então o sistema deve sugerir refeições com azeite, peixes e grãos integrais
+      ```
 
      # 🛠️ Template de Teste de Funcionalidade
 
@@ -67,7 +68,7 @@ Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriF
       | BUG-01    | FT-02                     | TMB calculada incorretamente para valores extremos | Alta                          | Em aberto  | Fulano      | https://github.com/orga-grupo/nutrifacil/issues/123   |
       
       ---
-
+   - Teste de Usabilidade
       - Defina 5 metas:
         -  Ex.: “O usuário deve conseguir configurar seu plano em ≤ 3 minutos”
 
