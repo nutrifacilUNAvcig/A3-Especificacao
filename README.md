@@ -58,16 +58,17 @@ Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriF
 
 ## 🚀 Instruções Gerais
 
-1. **Grupo & Organização**  
+1. **Data da Apresentação: 18/06/25**
+2. **Grupo & Organização**  
    - Máximo de **6 integrantes** por grupo.  
    - Crie uma **organização** no GitHub para seu grupo e armazene todo o código lá.  
    - Use **GitHub Projects** para planejar, priorizar e acompanhar as tarefas (colunas: Backlog, Em progresso, Revisão, Concluído). Distribua as tarefas e defina responsáveis.
 
-2. **Repositório & README**  
+3. **Repositório & README**  
    - O repositório principal deve conter um `README.md` completo e organizado.  
    - Consulte [Como escrever um bom README para seu projeto do GitHub](https://www.freecodecamp.org/portuguese/news/como-escrever-um-bom-arquivo-readme-para-seu-projeto-do-github/).
 
-3. **Testes**  
+4. **Testes**  
    - Teste de Funcionalidade
       - Descreva, no mínimo, **5 funcionalidades com cenários** e faça teste de usabilidade usando o template.
      
@@ -207,7 +208,7 @@ Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriF
             
             ---
 
-4. **Apresentação**  
+5. **Apresentação**  
    - Pasta `slides/` com arquivo de apresentação (PowerPoint, PDF ou Google Slides).  
    - Slides devem conter:  
      1. **Introdução**  
