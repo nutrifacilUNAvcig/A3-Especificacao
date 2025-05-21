@@ -7,7 +7,7 @@ Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriF
 - Implementar funcionalidades de seleção de dieta, cálculo de TMB, IMC e consumo de água.
 - Exibir recomendações de alimentos (proteínas, legumes, verduras, carboidratos) de acordo com a dieta escolhida.
 - Gerenciar restrições (alergias, intolerâncias).
-- Criar testes de usabilidade/funcionalidade em **Gherkin** (mín. 5 cenários).
+- Criar testes de usabilidade/funcionalidade.
 - Documentar todo o projeto em **README.md** seguindo boas práticas.
 - Apresentar em slides (Introdução, Motivação, Desenvolvimento, Resultados, Considerações Finais).
 
