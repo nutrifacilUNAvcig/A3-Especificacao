@@ -23,7 +23,20 @@ Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriF
    - Consulte [Como escrever um bom README para seu projeto do GitHub](https://www.freecodecamp.org/portuguese/news/como-escrever-um-bom-arquivo-readme-para-seu-projeto-do-github/).
 
 3. **Testes**  
-   - Descreva, no mínimo, **5 funcionalidades com cenários** e faça teste de usabilidade usando o template:
+   - Descreva, no mínimo, **5 funcionalidades com cenários** e faça teste de usabilidade usando o template.
+  
+   - ## 🧪 Cenário em Gherkin (exemplos)
+
+   ```gherkin
+   Funcionalidade: Seleção de Dieta
+   
+     Cenário: Usuário escolhe dieta Mediterrânea
+       Dado que o usuário seleciona a dieta "Mediterrânea"
+       E informa peso "70", altura "170", idade "30" e sexo "Feminino"
+       Quando solicita o plano alimentar
+       Então o sistema deve sugerir refeições com azeite, peixes e grãos integrais
+   ```
+
      # 🛠️ Template de Teste de Funcionalidade
 
       > **Instruções para o testador:**  
@@ -219,20 +232,3 @@ Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriF
 - Gráfico de consumo de água  
 
 ---
-
-## 🧪 Cenário em Gherkin (exemplos)
-
-```gherkin
-Funcionalidade: Seleção de Dieta
-
-  Cenário: Usuário escolhe dieta Mediterrânea
-    Dado que o usuário seleciona a dieta "Mediterrânea"
-    E informa peso "70", altura "170", idade "30" e sexo "Feminino"
-    Quando solicita o plano alimentar
-    Então o sistema deve sugerir refeições com azeite, peixes e grãos integrais
-```
-
----
-
-## 📂 Estrutura Sugerida
-
