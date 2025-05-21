@@ -22,9 +22,54 @@ Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriF
    - O repositório principal deve conter um `README.md` completo e organizado.  
    - Consulte [Como escrever um bom README para seu projeto do GitHub](https://www.freecodecamp.org/portuguese/news/como-escrever-um-bom-arquivo-readme-para-seu-projeto-do-github/).
 
-3. **Testes & Cenários Gherkin**  
-   - Crie, no mínimo, **5 cenários** para serem usados para testes de funcionalidade.  
-   - Faça teste de usabilidade
+3. **Testes**  
+   - Descreva, no mínimo, **5 funcionalidades com cenários** e faça teste de usabilidade usando o template:
+     # 🛠️ Template de Teste de Funcionalidade
+
+      > **Instruções para o testador:**  
+      > Preencha cada caso de teste antes de executar, siga os passos na ordem indicada e registre os resultados.
+      
+      ---
+      
+      ## 1. Informações Gerais
+      
+      - **Projeto:** NutriFácil  
+      - **Módulo/Funcionalidade:**  
+      - **Versão / Build:**  
+      - **Data:**  
+      - **Testador:**  
+      - **Ambiente:** (Ex.: `Dev`, `QA`, `Staging`)  
+      - **Pré-requisitos:**  
+        - Conta de usuário criada  
+        - Permissões de acesso configuradas  
+        - Dados de teste disponíveis (peso, altura, etc.)  
+      
+      ---
+      
+      ## 2. Casos de Teste (exemplo)
+      
+      | ID   | Funcionalidade                   | Pré-Condição                        | Passos                                                   | Dados de Entrada                          | Resultado Esperado                                                                 | Resultado Obtido                            | Status (✅/❌) | Observações                         |
+      | ---- | -------------------------------- | ----------------------------------- | -------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------- | ------------- | ------------------------------------ |
+      | FT-01 | Seleção de Dieta                | Usuário autenticado                 | 1. Navegar até “Escolher Dieta”<br>2. Selecionar “Low Carb”<br>3. Clicar em “Confirmar” | Dieta: `Low Carb`                          | Sistema exibe resumo da dieta Low Carb com lista de alimentos recomendados         |                                             |               |                                      |
+                   |                                      |
+            
+      ---
+      
+      ## 3. Critérios de Aceitação
+      
+      - ✅ **Passou:** Resultado Obtido igual ao Resultado Esperado  
+      - ❌ **Falhou:** Há divergência entre Resultado Obtido e Esperado  
+      
+      ---
+      
+      ## 4. Registro de Bugs
+      
+      | ID do Bug | Caso de Teste Relacionado | Descrição do Problema                              | Severidade (Alta/Média/Baixa) | Status     | Responsável | Link para issue no GitHub                            |
+      | --------- | ------------------------- | -------------------------------------------------- | ----------------------------- | ---------- | ----------- | ----------------------------------------------------- |
+      | BUG-01    | FT-02                     | TMB calculada incorretamente para valores extremos | Alta                          | Em aberto  | Fulano      | https://github.com/orga-grupo/nutrifacil/issues/123   |
+      
+      ---
+
       - Defina 5 metas:
         -  Ex.: “O usuário deve conseguir configurar seu plano em ≤ 3 minutos”
 
