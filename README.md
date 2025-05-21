@@ -51,7 +51,6 @@ Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriF
       | ID   | Funcionalidade                   | Pré-Condição                        | Passos                                                   | Dados de Entrada                          | Resultado Esperado                                                                 | Resultado Obtido                            | Status (✅/❌) | Observações                         |
       | ---- | -------------------------------- | ----------------------------------- | -------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------- | ------------- | ------------------------------------ |
       | FT-01 | Seleção de Dieta                | Usuário autenticado                 | 1. Navegar até “Escolher Dieta”<br>2. Selecionar “Low Carb”<br>3. Clicar em “Confirmar” | Dieta: `Low Carb`                          | Sistema exibe resumo da dieta Low Carb com lista de alimentos recomendados         |                                             |               |                                      |
-                   |                                      |
             
       ---
       
