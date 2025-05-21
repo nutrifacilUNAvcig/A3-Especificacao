@@ -43,59 +43,7 @@ Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriF
       > Preencha cada caso de teste antes de executar, siga os passos na ordem indicada e registre os resultados.
       
       ---
-      
-      ## 1. Informações Gerais
-      
-      - **Projeto:** NutriFácil  
-      - **Módulo/Funcionalidade:**  
-      - **Versão / Build:**  
-      - **Data:**  
-      - **Testador:**  
-      - **Ambiente:** (Ex.: `Dev`, `QA`, `Staging`)  
-      - **Pré-requisitos:**  
-        - Conta de usuário criada  
-        - Permissões de acesso configuradas  
-        - Dados de teste disponíveis (peso, altura, etc.)  
-      
-      ---
-      ### Cenário FT-01: Seleção de Dieta Mediterrânea
-
-**Objetivo**  
-Validar que, ao selecionar a dieta Mediterrânea e informar os dados pessoais, o sistema sugere corretamente refeições com azeite, peixes e grãos integrais.
-
-**Pré-condições**  
-- Usuário autenticado no NutriFácil  
-- Página de “Seleção de Dieta” aberta  
-
-**Passos**  
-1. Acessar a tela de seleção de dieta  
-2. Selecionar a opção **“Mediterrânea”**  
-3. Preencher o campo **Peso** com `70` kg  
-4. Preencher o campo **Altura** com `170` cm  
-5. Preencher o campo **Idade** com `30` anos  
-6. Selecionar **Sexo** como `Feminino`  
-7. Clicar no botão **“Solicitar Plano Alimentar”**
-
-**Dados de Entrada**  
-- Dieta: `Mediterrânea`  
-- Peso: `70`  
-- Altura: `170`  
-- Idade: `30`  
-- Sexo: `Feminino`  
-
-**Resultado Esperado**  
-- O sistema exibe um plano alimentar contendo refeições ricas em azeite de oliva, peixes e grãos integrais.
-
-**Resultado Obtido**  
-_(preencher após a execução do teste)_
-
-**Status**  
-- ☐ Passou  
-- ☐ Falhou  
-
-**Observações / Evidências**  
-- Ex.: screenshot do plano gerado  
-- Link para issue no GitHub (se houver)  
+   
 
       ## 2. Casos de Teste (exemplo)
       
