@@ -20,7 +20,7 @@ Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriF
 
 2. **Repositório & README**  
    - O repositório principal deve conter um `README.md` completo e organizado.  
-   - Consulte [Como escrever um bom README para seu projeto do GitHub](https://www.freecodecamp.org/portuguese/news/como-escrever-um-bom-arquivo-readme-para-seu-projeto-do-github/) :contentReference[oaicite:0]{index=0}.
+   - Consulte [Como escrever um bom README para seu projeto do GitHub](https://www.freecodecamp.org/portuguese/news/como-escrever-um-bom-arquivo-readme-para-seu-projeto-do-github/).
 
 3. **Testes & Cenários Gherkin**  
    - Crie no mínimo **5 cenários** para testes de funcionalidade ou usabilidade.  
