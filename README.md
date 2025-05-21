@@ -170,7 +170,7 @@ Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriF
 - **Consumo de Água Diário**:  
   `35 ml × peso (kg)`  
 
-### 4. Bonus (opcional)
+### 4. Bônus (opcional)
 - Receitas para cada dieta  
 - Gráfico de consumo de água  
 
