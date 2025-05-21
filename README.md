@@ -11,6 +11,51 @@ Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriF
 - Documentar todo o projeto em **README.md** seguindo boas práticas.
 - Apresentar em slides (Introdução, Motivação, Desenvolvimento, Resultados, Considerações Finais).
 
+## 📑 Especificação de Requisitos
+
+### 1. Dietas e Indicações
+- **Mediterrânea**: azeite de oliva, peixes, grãos integrais, legumes e frutas. Foco em saúde cardiovascular e manutenção de peso.  
+- **Low Carb**: redução de carboidratos, aumento de proteínas e gorduras boas. Foco em emagrecimento e controle glicêmico.  
+- **Cetogênica**: ingestão muito baixa de carboidratos e alta em gorduras. Para perda de gordura rápida e aumento de foco.  
+- **Vegetariana**: sem carnes; inclui ovos, laticínios (não vegana), grãos, vegetais e leguminosas.
+
+### 2. Entradas do Usuário
+1. **Dieta**: Mediterrânea, Low Carb, Cetogênica ou Vegetariana  
+2. **Peso** (kg)  
+3. **Altura** (cm)  
+4. **Idade** (anos)  
+5. **Sexo**: Masculino / Feminino  
+6. **Objetivo**:  
+   - Emagrecimento (perda de gordura, redução de medidas, aumento de energia, etc.)  
+   - Hipertrofia (ganho de massa, aumento de força, autoestima, etc.)  
+7. **Preferência de Alimentos** (por categoria, conforme dieta)  
+   - Proteínas  
+   - Legumes  
+   - Verduras  
+   - Carboidratos  
+8. **Alergias/Intolerâncias**: Lactose, Glúten, Proteína do leite, Ovo, Frutos do mar, Nenhuma
+
+### 3. Cálculos
+- **Taxa de Metabolismo Basal (TMB)** – Fórmula de Mifflin:  
+  - Homens: `TMB = 10×peso + 6,25×altura – 5×idade + 5`  
+  - Mulheres: `TMB = 10×peso + 6,25×altura – 5×idade – 161`
+
+- **Índice de Massa Corporal (IMC)**:  
+  `IMC = peso / (altura/100)²`  
+  - < 18,5: abaixo do peso  
+  - 18,5–24,9: peso normal  
+  - 25–29,9: sobrepeso  
+  - ≥ 30: obesidade
+
+- **Consumo de Água Diário**:  
+  `35 ml × peso (kg)`  
+
+### 4. Bônus (opcional)
+- Receitas para cada dieta  
+- Gráfico de consumo de água  
+
+---
+
 ## 🚀 Instruções Gerais
 
 1. **Grupo & Organização**  
@@ -175,47 +220,3 @@ Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriF
 
 ---
 
-## 📑 Especificação de Requisitos
-
-### 1. Dietas e Indicações
-- **Mediterrânea**: azeite de oliva, peixes, grãos integrais, legumes e frutas. Foco em saúde cardiovascular e manutenção de peso.  
-- **Low Carb**: redução de carboidratos, aumento de proteínas e gorduras boas. Foco em emagrecimento e controle glicêmico.  
-- **Cetogênica**: ingestão muito baixa de carboidratos e alta em gorduras. Para perda de gordura rápida e aumento de foco.  
-- **Vegetariana**: sem carnes; inclui ovos, laticínios (não vegana), grãos, vegetais e leguminosas.
-
-### 2. Entradas do Usuário
-1. **Dieta**: Mediterrânea, Low Carb, Cetogênica ou Vegetariana  
-2. **Peso** (kg)  
-3. **Altura** (cm)  
-4. **Idade** (anos)  
-5. **Sexo**: Masculino / Feminino  
-6. **Objetivo**:  
-   - Emagrecimento (perda de gordura, redução de medidas, aumento de energia, etc.)  
-   - Hipertrofia (ganho de massa, aumento de força, autoestima, etc.)  
-7. **Preferência de Alimentos** (por categoria, conforme dieta)  
-   - Proteínas  
-   - Legumes  
-   - Verduras  
-   - Carboidratos  
-8. **Alergias/Intolerâncias**: Lactose, Glúten, Proteína do leite, Ovo, Frutos do mar, Nenhuma
-
-### 3. Cálculos
-- **Taxa de Metabolismo Basal (TMB)** – Fórmula de Mifflin:  
-  - Homens: `TMB = 10×peso + 6,25×altura – 5×idade + 5`  
-  - Mulheres: `TMB = 10×peso + 6,25×altura – 5×idade – 161`
-
-- **Índice de Massa Corporal (IMC)**:  
-  `IMC = peso / (altura/100)²`  
-  - < 18,5: abaixo do peso  
-  - 18,5–24,9: peso normal  
-  - 25–29,9: sobrepeso  
-  - ≥ 30: obesidade
-
-- **Consumo de Água Diário**:  
-  `35 ml × peso (kg)`  
-
-### 4. Bônus (opcional)
-- Receitas para cada dieta  
-- Gráfico de consumo de água  
-
----
