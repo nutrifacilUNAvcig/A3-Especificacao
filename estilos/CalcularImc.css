@@ -7,11 +7,11 @@
       color: rgb(116, 116, 116);
     }
 
-    body {
-      background: linear-gradient(to right, rgb(108, 215, 182), rgb(0, 134, 92));
+     body {
+      background: linear-gradient(to right, rgb(100, 248, 201), rgb(212, 31, 236));
       min-height: 100vh;
     }
-
+    
     .CabecalhoIndex {
     width: 100%;
     display: flex;
