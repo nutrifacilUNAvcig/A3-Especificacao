@@ -2,6 +2,7 @@
 
 ## 📝 Descrição do Trabalho - 20 pontos
 Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriFácil**: um sistema de planejamento alimentar personalizado, que permita ao usuário montar seu plano alimentar conforme suas preferências e objetivos.
+Data da apresentação: **11/06/25**
 
 ## 🎯 Objetivos
 - Implementar funcionalidades de seleção de dieta, cálculo de TMB, IMC e consumo de água.
