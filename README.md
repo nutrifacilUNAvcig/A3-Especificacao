@@ -7,7 +7,7 @@ Data da apresentação: **11/06/25**
 
 ## 🎯 Objetivos
 - Implementar funcionalidades de seleção de dieta, cálculo de TMB, IMC e consumo de água.
-- Exibir recomendações de alimentos (proteínas, legumes, verduras, carboidratos) de acordo com a dieta escolhida.
+- Exibir recomendações de alimentos (proteínas, legumes, verduras, carboidratos), quantidade e calorias de acordo com a dieta escolhida.
 - Gerenciar restrições (alergias, intolerâncias).
 - Criar testes de usabilidade/funcionalidade.
 - Documentar todo o projeto em **README.md** seguindo boas práticas.
