@@ -5,7 +5,7 @@ Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriF
 
 ## 🎯 Objetivos
 - Implementar funcionalidades de seleção de dieta, cálculo de TMB, IMC e consumo de água.
-- Exibir recomendações de alimentos (proteínas, legumes, verduras, carboidratos) de acordo com a dieta escolhida.
+- Exibir recomendações de alimentos (proteínas, legumes, verduras, carboidratos), quantidade e calorias de acordo com a dieta escolhida.
 - Gerenciar restrições (alergias, intolerâncias).
 - Criar testes de usabilidade/funcionalidade.
 - Documentar todo o projeto em **README.md** seguindo boas práticas.
@@ -58,16 +58,17 @@ Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriF
 
 ## 🚀 Instruções Gerais
 
-1. **Grupo & Organização**  
+1. **Data da Apresentação: 18/06/25**
+2. **Grupo & Organização**  
    - Máximo de **6 integrantes** por grupo.  
    - Crie uma **organização** no GitHub para seu grupo e armazene todo o código lá.  
    - Use **GitHub Projects** para planejar, priorizar e acompanhar as tarefas (colunas: Backlog, Em progresso, Revisão, Concluído). Distribua as tarefas e defina responsáveis.
 
-2. **Repositório & README**  
+3. **Repositório & README**  
    - O repositório principal deve conter um `README.md` completo e organizado.  
    - Consulte [Como escrever um bom README para seu projeto do GitHub](https://www.freecodecamp.org/portuguese/news/como-escrever-um-bom-arquivo-readme-para-seu-projeto-do-github/).
 
-3. **Testes**  
+4. **Testes**  
    - Teste de Funcionalidade
       - Descreva, no mínimo, **5 funcionalidades com cenários** e faça teste de usabilidade usando o template.
      
@@ -95,7 +96,7 @@ Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriF
       
       | ID   | Funcionalidade                   | Pré-Condição                        | Passos                                                   | Dados de Entrada                          | Resultado Esperado                                                                 | Resultado Obtido                            | Status (✅/❌) | Observações                         |
       | ---- | -------------------------------- | ----------------------------------- | -------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------- | ------------- | ------------------------------------ |
-      | FT-01 | SSeleção de Dieta Mediterrânea                | Usuário autenticado e página de “Seleção de Dieta” aberta                | 1. Acessar a tela de seleção de dieta  2. Selecionar a opção **“Mediterrânea”**  3. Preencher o campo **Peso** com `70` kg  4. Preencher o campo **Altura** com `170` cm  5. Preencher o campo **Idade** com `30` anos  6. Selecionar **Sexo** como `Feminino`  7. Clicar no botão **“Solicitar Plano Alimentar”**                        |O sistema exibe um plano alimentar contendo refeições ricas em azeite de oliva, peixes e grãos integrais.         |      - Dieta: `Mediterrânea`  - Peso: `70`  - Altura: `170`  - Idade: `30`  - Sexo: `Feminino`                                        |       _(preencher após a execução do teste)_        |                                    |
+      | FT-01 | Seleção de Dieta Mediterrânea                | Usuário autenticado e página de “Seleção de Dieta” aberta                | 1. Acessar a tela de seleção de dieta  2. Selecionar a opção **“Mediterrânea”**  3. Preencher o campo **Peso** com `70` kg  4. Preencher o campo **Altura** com `170` cm  5. Preencher o campo **Idade** com `30` anos  6. Selecionar **Sexo** como `Feminino`  7. Clicar no botão **“Solicitar Plano Alimentar”**                        |      - Dieta: `Mediterrânea`  - Peso: `70`  - Altura: `170`  - Idade: `30`  - Sexo: `Feminino`     |  O sistema exibe um plano alimentar contendo refeições ricas em azeite de oliva, peixes e grãos integrais.      |       _(preencher após a execução do teste)_        |                                    |
             
       ---
       
@@ -207,7 +208,7 @@ Desenvolver em **grupo (máx. 6 alunos)** uma solução completa para o **NutriF
             
             ---
 
-4. **Apresentação**  
+5. **Apresentação**  
    - Pasta `slides/` com arquivo de apresentação (PowerPoint, PDF ou Google Slides).  
    - Slides devem conter:  
      1. **Introdução**  
