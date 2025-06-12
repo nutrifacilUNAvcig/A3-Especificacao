@@ -1,21 +1,47 @@
-import { Injectable } from '@nestjs/common';
-import { CreateUsuarioDto } from './dto/create-usuario.dto';
+import { Injectable, NotFoundException } from '@nestjs/common';
+import { Model } from 'mongoose';
+import { InjectModel } from '@nestjs/mongoose';
 import { Usuario } from './schemas/usuarios.schema';
+import { CreateUsuarioDto } from './dto/create-usuario.dto';
 
 @Injectable()
 export class UsuariosService {
-    private usuarios: Usuario[] = [];
+  constructor(@InjectModel(Usuario.name) private usuarioModel: Model<Usuario>) {}
 
-    create(createUsuarioDto: CreateUsuarioDto) {
-        const usuario: Usuario = {
-            id: Date.now(),
-            ...createUsuarioDto,
-        };
-        this.usuarios.push(usuario); // Simula a adição ao armazenamento
-        return usuario;
-    }
+  async criarUsuario(createUsuarioDto: CreateUsuarioDto): Promise<Usuario> {
+    const usuarioCriado = new this.usuarioModel(createUsuarioDto);
+    return usuarioCriado.save();
+  }
 
-    findAll(): Usuario[] {
-        return this.usuarios; // Retorna todos os usuários
+  async buscarTodos(): Promise<Usuario[]> {
+    return this.usuarioModel.find().exec();
+  }
+
+  async buscarPorId(id: string): Promise<Usuario> {
+    const usuario = await this.usuarioModel.findById(id).exec();
+    if (!usuario) {
+      throw new NotFoundException(`Usuário com ID ${id} não encontrado`);
     }
+    return usuario;
+  }
+
+  async atualizarUsuario(id: string, updateUsuarioDto: Partial<CreateUsuarioDto>): Promise<Usuario> {
+    const usuarioAtualizado = await this.usuarioModel.findByIdAndUpdate(
+      id,
+      updateUsuarioDto,
+      { new: true }
+    ).exec();
+    
+    if (!usuarioAtualizado) {
+      throw new NotFoundException(`Usuário com ID ${id} não encontrado`);
+    }
+    return usuarioAtualizado;
+  }
+
+  async deletarUsuario(id: string): Promise<void> {
+    const resultado = await this.usuarioModel.findByIdAndDelete(id).exec();
+    if (!resultado) {
+      throw new NotFoundException(`Usuário com ID ${id} não encontrado`);
+    }
+  }
 }
