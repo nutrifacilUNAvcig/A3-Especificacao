@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { CreateUsuarioDto } from './dto/create-usuario.dto';
-import { Usuario } from './schemas/usuario.schema'
+import { Usuario } from './schemas/usuarios.schema';
 
 @Injectable()
 export class UsuariosService {
@@ -10,7 +10,7 @@ export class UsuariosService {
         const usuario: Usuario = {
             id: Date.now(),
             ...createUsuarioDto,
-        };      
+        };
         this.usuarios.push(usuario); // Simula a adição ao armazenamento
         return usuario;
     }
