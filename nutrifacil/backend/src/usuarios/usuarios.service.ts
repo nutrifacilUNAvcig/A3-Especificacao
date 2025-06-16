@@ -2,6 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { Usuario } from './schemas/usuarios.schema';
+import { UpdateUsuarioDto } from './dto/update-usuario.dto';
 import { CreateUsuarioDto } from './dto/create-usuario.dto';
 
 @Injectable()
@@ -18,30 +19,28 @@ export class UsuariosService {
   }
 
   async buscarPorId(id: string): Promise<Usuario> {
-    const usuario = await this.usuarioModel.findById(id).exec();
-    if (!usuario) {
-      throw new NotFoundException(`Usuário com ID ${id} não encontrado`);
-    }
-    return usuario;
+    return this.findOrThrow(id);
   }
 
-  async atualizarUsuario(id: string, updateUsuarioDto: Partial<CreateUsuarioDto>): Promise<Usuario> {
-    const usuarioAtualizado = await this.usuarioModel.findByIdAndUpdate(
-      id,
-      updateUsuarioDto,
-      { new: true }
-    ).exec();
-    
-    if (!usuarioAtualizado) {
-      throw new NotFoundException(`Usuário com ID ${id} não encontrado`);
-    }
-    return usuarioAtualizado;
+  async atualizarUsuario(id: string, updateUsuarioDto: UpdateUsuarioDto): Promise<Usuario> {
+    return this.usuarioModel.findByIdAndUpdate(
+      id, updateUsuarioDto, { new: true }
+    ).exec().then(user => user || this.throwNotFound(id));
   }
 
   async deletarUsuario(id: string): Promise<void> {
-    const resultado = await this.usuarioModel.findByIdAndDelete(id).exec();
-    if (!resultado) {
-      throw new NotFoundException(`Usuário com ID ${id} não encontrado`);
-    }
+    return this.usuarioModel.findByIdAndDelete(id).exec().then(res => {
+      if (!res) this.throwNotFound(id);
+    });
+  }
+
+  private async findOrThrow(id: string): Promise<Usuario> {
+    const usuario = await this.usuarioModel.findById(id).exec();
+    if (!usuario) this.throwNotFound(id);
+    return usuario;
+  }
+
+  private throwNotFound(id: string): never {
+    throw new NotFoundException(`Usuário com ID ${id} não encontrado`);
   }
 }
