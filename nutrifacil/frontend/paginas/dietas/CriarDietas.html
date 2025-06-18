@@ -1,79 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../estilos/CalcularMetabolismo.css">
-    <title>Criar Dieta</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gerar Dieta</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: auto; }
+    .form-group { margin-bottom: 15px; }
+    label { display: block; font-weight: bold; margin-bottom: 5px; }
+    input { width: 100%; padding: 8px; }
+    .btn { padding: 10px 20px; font-size: 16px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+    .btn:hover { background-color: #0056b3; }
+    .resultado { margin-top: 20px; white-space: pre-wrap; background: #f7f7f7; padding: 10px; border-radius: 5px; }
+  </style>
 </head>
 <body>
-      <header class="CabecalhoIndex">
-        <div class="MenuCabecalho">
-            <div class="imagemLogoCabecalho">
-                <img  onclick="window.location.href='index.html'" src="../imagens/logo.png" alt="ImagemLogo">
-            </div>
 
-            <div class="IntensCabecalhoIndex">
-                <!--<img class="ImagemCabecalhoIndex" src="../imagens/telefones.png" alt="ImagemAoLadoDoTexto">!-->
-                <a href="#">Lorem1</a>
-            </div>
-            <div class="linhaVertical"></div><!--linha -->
-            <div class="IntensCabecalhoIndex">
-                <!--<img class="ImagemCabecalhoIndex" src="../imagens/telefones.png" alt="ImagemAoLadoDoTexto">!-->
-                <a href="#">Lorem, ipsum.</a>
-            </div>
-            <div class="linhaVertical"></div><!--linha -->
-            <div class="IntensCabecalhoIndex">
-                <!--<img class="ImagemCabecalhoIndex" src="../imagens/telefones.png" alt="ImagemAoLadoDoTexto">!-->
-                <a href="#">Lorem, ipsum.</a>
-            </div>
-            <div class="linhaVertical"></div><!--linha -->
-            <div class="IntensCabecalhoIndex">
-                <!--<img class="ImagemCabecalhoIndex" src="../imagens/telefones.png" alt="ImagemAoLadoDoTexto">!-->
-                <a id="lista-ramais" href="#">Lorem, ipsum.</a>
-                <!-- Section com os ramais dentro do link --> 
-            </div>
-        </div>
-        <div class="BarraDeMenuCabecalho">
-            <p>Menu</p>
-        </div>
-    </header>
+  <h2>Informe seus dados para gerar uma dieta</h2>
 
-  <div class="container">
-    <h2>Informe seus dados</h2>
-    <div class="form-group">
-      <label for="idade">Dieta</label>
-      <input type="" id="dieta" placeholder="Ex: (Tipo de Dieta)" required />
-    </div>
-    <div class="form-group">
-      <label for="peso">Peso (kg)</label>
-      <input type="number" id="peso" placeholder="Ex: 70" step="0.1" required />
-    </div>
-    <div class="form-group">
-      <label for="altura">Altura (m)</label>
-      <input type="number" id="altura" placeholder="Ex: 1.75" step="0.01" required />
-    </div>
-    <div class="form-group">
-      <label for="idade">Idade</label>
-      <input type="number" id="idade" placeholder="Ex: (0 - 60+)" step="1" required />
-    </div>
-    <div class="form-group">
-      <label for="idade">sexo</label>
-      <input type="number" id="sexo" placeholder="Sexo" step="1" required />
-    </div>
-    <div class="form-group">
-      <label for="idade">Objetivo</label>
-      <input type="number" id="objetivo" placeholder="emagrecer" step="1" required />
-    </div>
-    <div class="form-group">
-      <label for="idade">Alimentos</label>
-      <input type="number" id="alimentos" placeholder="alimentos" step="1" required />
-    </div>
-    <div class="form-group">
-      <label for="idade">Alergia</label>
-      <input type="number" id="alimentos" placeholder="alimentos" step="1" required />
-    </div>
-    <button class="btn" onclick="calcularIMC()">Gerar dieta</button>
-    <div class="resultado" id="resultado"></div>
+  <div class="form-group">
+    <label for="dieta">Tipo de Dieta</label>
+    <input id="dieta" placeholder="MEDITERRANEA, LOW_CARB, etc." required />
   </div>
+  <div class="form-group">
+    <label for="peso">Peso (kg)</label>
+    <input type="number" id="peso" placeholder="70" step="0.1" required />
+  </div>
+  <div class="form-group">
+    <label for="altura">Altura (cm)</label>
+    <input type="number" id="altura" placeholder="175" step="0.1" required />
+  </div>
+  <div class="form-group">
+    <label for="idade">Idade</label>
+    <input type="number" id="idade" placeholder="25" required />
+  </div>
+  <div class="form-group">
+    <label for="sexo">Sexo</label>
+    <input id="sexo" placeholder="MASCULINO ou FEMININO" required />
+  </div>
+  <div class="form-group">
+    <label for="objetivo">Objetivo</label>
+    <input id="objetivo" placeholder="EMAGRECIMENTO ou HIPERTROFIA" required />
+  </div>
+  <div class="form-group">
+    <label for="preferencias">Preferências Alimentares (opcional)</label>
+    <input id="preferencias" placeholder="frango, arroz, banana" />
+  </div>
+  <div class="form-group">
+    <label for="alergias">Alergias (opcional)</label>
+    <input id="alergias" placeholder="glúten, lactose" />
+  </div>
+
+  <button class="btn" onclick="gerarDieta()">Gerar Dieta</button>
+
+  <div class="resultado" id="resultado"></div>
+
+  <script>
+    async function gerarDieta() {
+      const dieta = document.getElementById('dieta').value;
+      const peso = parseFloat(document.getElementById('peso').value);
+      const altura = parseFloat(document.getElementById('altura').value);
+      const idade = parseInt(document.getElementById('idade').value);
+      const sexo = document.getElementById('sexo').value;
+      const objetivo = document.getElementById('objetivo').value;
+
+      const preferenciasRaw = document.getElementById('preferencias').value;
+      const alergiasRaw = document.getElementById('alergias').value;
+
+      const preferencias = {
+        proteinas: preferenciasRaw ? preferenciasRaw.split(',').map(p => p.trim()) : [],
+        legumes: [],
+        verduras: [],
+        carboidratos: [],
+      };
+
+      const alergias = alergiasRaw ? alergiasRaw.split(',').map(a => a.trim()) : [];
+
+      const payload = {
+        dieta,
+        peso,
+        altura,
+        idade,
+        sexo,
+        objetivo,
+        preferencias,
+        alergias
+      };
+
+      try {
+        const res = await fetch('http://localhost:3000/dietas/plano', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (!res.ok) {
+          throw new Error(`Erro: ${res.status}`);
+        }
+
+        const resultado = await res.json();
+        document.getElementById('resultado').innerText = JSON.stringify(resultado, null, 2);
+      } catch (err) {
+        document.getElementById('resultado').innerText = 'Erro ao gerar dieta: ' + err.message;
+      }
+    }
+  </script>
+</body>
 </html>
