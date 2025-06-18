@@ -96,6 +96,18 @@ Os usuários devem fornecer as seguintes informações:
 2. **Template de Teste de Usabilidade**:
    - Instruções para o moderador e os dados do participante (nome, perfil, data, etc.).
    - Definir tarefas e métricas de satisfação.
+
+## 💡 Ideias de Desenvolvimento
+- **Sugestões de Refeições**: Criar um recurso que sugere refeições específicas com base em preferências e restrições do usuário.
+- **Calculadora de Macronutrientes**: Implementar uma ferramenta que calcula a distribuição de macronutrientes (carboidratos, proteínas e gorduras) com base nas metas do usuário.
+- **Integração com APIs Externas**: Utilizar APIs de nutrição para fornecer informações em tempo real sobre alimentos e receitas.
+- **Planos de Refeições Personalizados**: Gerar planos de refeições semanais com opções de substituição.
+- **Rastreamento de Consumo de Água**: Criar uma seção onde os usuários possam registrar e monitorar sua ingestão de água diariamente.
+- **Notificações Personalizadas**: Adicionar um sistema de notificações que lembre os usuários de beber água ou seguir seu plano alimentar.
+- **Feedback do Usuário**: Implementar um sistema para coletar feedback dos usuários sobre as recomendações de alimentos e planos de refeições.
+- **Versão Móvel da Aplicação**: Criar uma versão responsiva ou um aplicativo móvel para facilitar o acesso em dispositivos móveis.
+- **Assistente Virtual com IA**: Implementar um sistema de inteligência artificial que auxilie os usuários na escolha da dieta mais adequada com base em suas preferências, histórico de saúde e objetivos, utilizando algoritmos de aprendizado de máquina.
+
 ## 📚 Referências:
 - Doc do JavaScript
 - Doc do Typescript
