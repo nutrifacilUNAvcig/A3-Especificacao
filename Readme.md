@@ -9,7 +9,7 @@ NutriFácil é uma aplicação que ajuda usuários a escolher uma dieta apropria
 - **Gerenciamento de Restrições**: Controlar alergias e intolerâncias alimentares.
 - **Testes e Documentação**(à desenvolver): Criar testes de usabilidade e funcionalidade, além de documentar todo o projeto em **README.md**, seguindo boas práticas.
 ## 🛠️ Ferramentas Utilizadas
-- **HTML e CSS*: Linguagens de marcação para usar o front-end.
+- **HTML e CSS**: Linguagens de marcação para usar o front-end.
 - **JavaScript**: Linguagem de programação principal para lógica de front-end.
 - **TypeScript**: Superset do JavaScript que adiciona tipagem estática, melhorando a manutenção do código, usado no back-end.
 - **Node.js**: Ambiente de execução JavaScript no lado servidor e usado para API e back-end.
