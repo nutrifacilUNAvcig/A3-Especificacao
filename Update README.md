@@ -8,6 +8,13 @@ NutriFácil é uma aplicação que ajuda usuários a escolher uma dieta apropria
 - **Recomendações Personalizadas**: Fornecer recomendações de alimentos, por categoria e quantidade, baseadas na dieta escolhida.
 - **Gerenciamento de Restrições**: Controlar alergias e intolerâncias alimentares.
 - **Testes e Documentação**(à desenvolver): Criar testes de usabilidade e funcionalidade, além de documentar todo o projeto em **README.md**, seguindo boas práticas.
+## 🛠️ Ferramentas Utilizadas
+- **JavaScript**: Linguagem de programação principal para lógica de front-end e back-end.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática, melhorando a manutenção do código.
+- **Node.js**: Ambiente de execução JavaScript no lado servidor.
+- **NestJS**: Framework para construir aplicações escaláveis e eficientes, utilizando TypeScript.
+- **CSS**: Linguagem de estilo utilizada para descrever a apresentação da aplicação.
+- **MongoDB**: Banco de dados NoSQL utilizado para armazenamento de dados.
 
 ## 📑 Especificação de Requisitos
 
@@ -79,14 +86,20 @@ Os usuários devem fornecer as seguintes informações:
 | FT-01| Seleção de Dieta Mediterrânea | Usuário autenticado          | Acessar opção "Mediterrânea", preencher Peso, Altura, Idade, Sexo e solicitar plano | Dieta: `Mediterrânea`, Peso: `70`, Altura: `170`, Idade: `30`, Sexo: `Feminino` | O sistema exibe plano com refeições ricas em azeite, peixes e grãos integrais. | _(preencher após a execução)_  |        |                          |
 
 #### Teste de Usabilidade
-1. **Metas**: Defina 5 metas para medir a eficácia do sistema (ex: "O usuário deve conseguir configurar seu plano em ≤ 3 minutos").
+1. **Metas para Medir a Eficácia do Sistema**:
+   - O usuário deve conseguir selecionar sua dieta em até 30 segundos.
+   - O usuário deve completar o preenchimento de dados pessoais em até 60 segundos.
+   - O sistema deve gerar o plano alimentar em até 15 segundos.
+   - O usuário deve ser capaz de identificar onde registrar alergias/intolerâncias em até 30 segundos.
+   - O usuário deve conseguir configurar seu plano alimentar em ≤ 3 minutos.
+
 2. **Template de Teste de Usabilidade**:
    - Instruções para o moderador e os dados do participante (nome, perfil, data, etc.).
    - Definir tarefas e métricas de satisfação.
-## 📚 Ferramentas utilizadas:
-- JavaScript
-- Typescript
-- Nodejs
-- Nestjs
-- CSS
-- MongoDB
+## 📚 Referências:
+- Doc do JavaScript
+- Doc do Typescript
+- Doc do Nodejs
+- Doc do Nestjs
+- Doc do CSS
+- Doc do MongoDB
