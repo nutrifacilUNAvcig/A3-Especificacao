@@ -3,105 +3,193 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gerar Dieta</title>
+  <title>Criar Dieta</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: auto; }
-    .form-group { margin-bottom: 15px; }
-    label { display: block; font-weight: bold; margin-bottom: 5px; }
-    input { width: 100%; padding: 8px; }
-    .btn { padding: 10px 20px; font-size: 16px; background-color: #007bff; color: white; border: none; cursor: pointer; }
-    .btn:hover { background-color: #0056b3; }
-    .resultado { margin-top: 20px; white-space: pre-wrap; background: #f7f7f7; padding: 10px; border-radius: 5px; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #c0b8b8;
+      color: #ddd;
+      padding: 30px;
+    }
+
+    .container {
+      background-color: #444;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      text-align: center;
+      color: #fff;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+   input, select {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 4px;
+  color: #ddd;
+  box-sizing: border-box;
+  height: 38px;
+}
+
+
+    .btn {
+      background-color: #0055aa;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #003f88;
+    }
+
+    .resultado {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #555;
+      border-radius: 5px;
+      color: #fff;
+    }
+
+    .resultado strong {
+      color: #4fc3f7;
+    }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h2>Informe seus dados</h2>
+    
+    <div class="form-group">
+      <label for="dieta">Tipo de Dieta</label>
+      <select id="dieta" required>
+        <option value="Mediterrânea">Mediterrânea</option>
+        <option value="Low Carb">Low Carb</option>
+        <option value="Cetogênica">Cetogênica</option>
+        <option value="Vegetariana">Vegetariana</option>
+      </select>
+    </div>
 
-  <h2>Informe seus dados para gerar uma dieta</h2>
+    <div class="form-group">
+      <label for="peso">Peso (kg)</label>
+      <input type="number" id="peso" placeholder="Ex: 70" step="0.1" required />
+    </div>
 
-  <div class="form-group">
-    <label for="dieta">Tipo de Dieta</label>
-    <input id="dieta" placeholder="MEDITERRANEA, LOW_CARB, etc." required />
-  </div>
-  <div class="form-group">
-    <label for="peso">Peso (kg)</label>
-    <input type="number" id="peso" placeholder="70" step="0.1" required />
-  </div>
-  <div class="form-group">
-    <label for="altura">Altura (cm)</label>
-    <input type="number" id="altura" placeholder="175" step="0.1" required />
-  </div>
-  <div class="form-group">
-    <label for="idade">Idade</label>
-    <input type="number" id="idade" placeholder="25" required />
-  </div>
-  <div class="form-group">
-    <label for="sexo">Sexo</label>
-    <input id="sexo" placeholder="MASCULINO ou FEMININO" required />
-  </div>
-  <div class="form-group">
-    <label for="objetivo">Objetivo</label>
-    <input id="objetivo" placeholder="EMAGRECIMENTO ou HIPERTROFIA" required />
-  </div>
-  <div class="form-group">
-    <label for="preferencias">Preferências Alimentares (opcional)</label>
-    <input id="preferencias" placeholder="frango, arroz, banana" />
-  </div>
-  <div class="form-group">
-    <label for="alergias">Alergias (opcional)</label>
-    <input id="alergias" placeholder="glúten, lactose" />
-  </div>
+    <div class="form-group">
+      <label for="altura">Altura (cm)</label>
+      <input type="number" id="altura" placeholder="Ex: 175" step="0.1" required />
+    </div>
 
-  <button class="btn" onclick="gerarDieta()">Gerar Dieta</button>
+    <div class="form-group">
+      <label for="idade">Idade</label>
+      <input type="number" id="idade" placeholder="Ex: 25" required />
+    </div>
 
-  <div class="resultado" id="resultado"></div>
+    <div class="form-group">
+      <label for="sexo">Sexo</label>
+      <select id="sexo" required>
+        <option value="Masculino">Masculino</option>
+        <option value="Feminino">Feminino</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="objetivo">Objetivo</label>
+      <select id="objetivo" required>
+        <option value="Emagrecimento">Emagrecimento</option>
+        <option value="Hipertrofia">Hipertrofia</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="alimentos">Alimentos Preferidos (opcional)</label>
+      <input type="text" id="alimentos" placeholder="Ex: frango, arroz, espinafre">
+    </div>
+
+    <div class="form-group">
+      <label for="alergias">Alergias (opcional)</label>
+      <input type="text" id="alergias" placeholder="Ex: leite, glúten">
+    </div>
+
+    <button class="btn" onclick="gerarDieta()">Gerar Dieta</button>
+
+    <div class="resultado" id="resultado"></div>
+  </div>
 
   <script>
     async function gerarDieta() {
-      const dieta = document.getElementById('dieta').value;
-      const peso = parseFloat(document.getElementById('peso').value);
-      const altura = parseFloat(document.getElementById('altura').value);
-      const idade = parseInt(document.getElementById('idade').value);
-      const sexo = document.getElementById('sexo').value;
-      const objetivo = document.getElementById('objetivo').value;
-
-      const preferenciasRaw = document.getElementById('preferencias').value;
-      const alergiasRaw = document.getElementById('alergias').value;
-
-      const preferencias = {
-        proteinas: preferenciasRaw ? preferenciasRaw.split(',').map(p => p.trim()) : [],
-        legumes: [],
-        verduras: [],
-        carboidratos: [],
+      const data = {
+        dieta: document.getElementById('dieta').value,
+        peso: parseFloat(document.getElementById('peso').value),
+        altura: parseFloat(document.getElementById('altura').value),
+        idade: parseInt(document.getElementById('idade').value),
+        sexo: document.getElementById('sexo').value,
+        objetivo: document.getElementById('objetivo').value,
+        preferencias: {
+          proteinas: [],
+          legumes: [],
+          verduras: [],
+          carboidratos: []
+        },
+        alergias: document.getElementById('alergias').value.split(',').map(a => a.trim()).filter(a => a)
       };
 
-      const alergias = alergiasRaw ? alergiasRaw.split(',').map(a => a.trim()) : [];
-
-      const payload = {
-        dieta,
-        peso,
-        altura,
-        idade,
-        sexo,
-        objetivo,
-        preferencias,
-        alergias
-      };
+      const resultadoDiv = document.getElementById('resultado');
+      resultadoDiv.innerHTML = 'Gerando dieta...';
 
       try {
-        const res = await fetch('http://localhost:3000/dietas/plano', {
+        const response = await fetch('http://localhost:3000/dietas/plano', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
         });
 
-        if (!res.ok) {
-          throw new Error(`Erro: ${res.status}`);
+        if (!response.ok) {
+          throw new Error(`Erro: ${response.status}`);
         }
 
-        const resultado = await res.json();
-        document.getElementById('resultado').innerText = JSON.stringify(resultado, null, 2);
+        const resultado = await response.json();
+
+        resultadoDiv.innerHTML = `
+          <strong>TMB:</strong> ${resultado.tmb} kcal<br>
+          <strong>IMC:</strong> ${resultado.imc}<br>
+          <strong>Água diária:</strong> ${resultado.aguaDiaria_ml} ml<br><br>
+          <strong>Plano Alimentar:</strong><br>
+          ${resultado.recomendacoes.refeicoes.map(ref => `
+            <div>
+              <strong>${ref.periodo}</strong>:<br>
+              ${ref.itens.map(item => `- ${item}`).join('<br>')}
+              <br><em>Calorias estimadas: ${ref.caloriasEstimadas}</em>
+            </div>
+            <br>
+          `).join('')}
+        `;
       } catch (err) {
-        document.getElementById('resultado').innerText = 'Erro ao gerar dieta: ' + err.message;
+        resultadoDiv.innerHTML = `Erro ao gerar dieta: ${err}`;
       }
     }
   </script>
