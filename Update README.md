@@ -80,11 +80,13 @@ Os usuários devem fornecer as seguintes informações:
 
 #### Teste de Usabilidade
 1. **Metas**: Defina 5 metas para medir a eficácia do sistema (ex: "O usuário deve conseguir configurar seu plano em ≤ 3 minutos").
-2. **Participantes**: Selecionar entre 5 a 8 usuários representativos.
-
-3. **Template de Teste de Usabilidade**:
+2. **Template de Teste de Usabilidade**:
    - Instruções para o moderador e os dados do participante (nome, perfil, data, etc.).
    - Definir tarefas e métricas de satisfação.
-
-## 📚 Referências
-- Para mais informações sobre como escrever um bom README, consulte [este guia](https://www.freecodecamp.org/portuguese/news/como-escrever-um-bom-arquivo-readme-para-seu-projeto-do-github/).
+## 📚 Ferramentas utilizadas:
+- JavaScript
+- Typescript
+- Nodejs
+- Nestjs
+- CSS
+- MongoDB
