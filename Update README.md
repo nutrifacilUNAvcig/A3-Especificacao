@@ -113,9 +113,9 @@ Os usuários devem fornecer as seguintes informações:
 - **Assistente Virtual com IA**: Implementar um sistema de inteligência artificial que auxilie os usuários na escolha da dieta mais adequada com base em suas preferências, histórico de saúde e objetivos, utilizando algoritmos de aprendizado de máquina.
 
 ## 📚 Referências:
-- Doc do JavaScript
-- Doc do Typescript
-- Doc do Nodejs
-- Doc do Nestjs
-- Doc do CSS
-- Doc do MongoDB
+- Documentação do [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- Documentação do [TypeScript](https://www.typescriptlang.org/docs/)
+- Documentação do [Node.js](https://nodejs.org/en/docs/)
+- Documentação do [NestJS](https://docs.nestjs.com/)
+- Documentação do [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- Documentação do [MongoDB](https://docs.mongodb.com/)
