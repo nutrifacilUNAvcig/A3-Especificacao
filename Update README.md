@@ -78,12 +78,16 @@ Os usuários devem fornecer as seguintes informações:
         Quando solicita o plano alimentar
         Então o sistema deve sugerir refeições com azeite, peixes e grãos integrais
     ```
-
 2. **Casos de Teste**:
    
 | ID   | Funcionalidade                | Pré-Condição                 | Passos                                                        | Dados de Entrada                                      | Resultado Esperado                                                        | Resultado Obtido           | Status | Observações               |
 |------|-------------------------------|------------------------------|--------------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------------------------|----------------------------|--------|--------------------------|
 | FT-01| Seleção de Dieta Mediterrânea | Usuário autenticado          | Acessar opção "Mediterrânea", preencher Peso, Altura, Idade, Sexo e solicitar plano | Dieta: `Mediterrânea`, Peso: `70`, Altura: `170`, Idade: `30`, Sexo: `Feminino` | O sistema exibe plano com refeições ricas em azeite, peixes e grãos integrais. | _(preencher após a execução)_  |        |                          |
+| FT-02| Cálculo do IMC               | Usuário informa dados        | Acessar a tela de cálculo, inserir peso e altura e calcular  | Peso: `70`, Altura: `170`                         | O sistema exibe o IMC correto para os dados fornecidos.                  | _(preencher após a execução)_  |        |                          |
+| FT-03| Cálculo da TMB                | Usuário informa idade, peso e altura | Acessar a tela de cálculo de TMB, inserir dados e calcular | Peso: `70`, Altura: `170`, Idade: `30`, Sexo: `Feminino` | O sistema exibe a TMB correta para os dados fornecidos.                  | _(preencher após a execução)_  |        |                          |
+| FT-04| Registro de Alergias          | Usuário autenticado          | Acessar a tela de registro, inserir alergias e salvar       | Alergias: `Lactose`                               | O sistema confirma o registro das alergias fornecidas.                   | _(preencher após a execução)_  |        |                          |
+| FT-05| Recebimento de Recomendações  | Usuário escolheu dieta       | Acessar tela de recomendações e solicitar sugestões          | Dieta: `Low Carb`                                 | O sistema exibe recomendações de refeições específicas.                   | _(preencher após a execução)_  |        |                          |
+
 
 #### Teste de Usabilidade
 1. **Metas para Medir a Eficácia do Sistema**:
