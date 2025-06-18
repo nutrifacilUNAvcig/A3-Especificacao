@@ -1,4 +1,4 @@
-# 📊 NutriFácil
+# 📊 Protótipo NutriFácil
 
 NutriFácil é uma aplicação que ajuda usuários a escolher uma dieta apropriada, calcular suas necessidades nutricionais e obter recomendações personalizadas de alimentos. 
 
@@ -7,8 +7,7 @@ NutriFácil é uma aplicação que ajuda usuários a escolher uma dieta apropria
 - **Cálculos de Nutrição**: Calcular Taxa de Metabolismo Basal (TMB), Índice de Massa Corporal (IMC) e o consumo diário de água.
 - **Recomendações Personalizadas**: Fornecer recomendações de alimentos, por categoria e quantidade, baseadas na dieta escolhida.
 - **Gerenciamento de Restrições**: Controlar alergias e intolerâncias alimentares.
-- **Testes e Documentação**: Criar testes de usabilidade e funcionalidade, além de documentar todo o projeto em **README.md**, seguindo boas práticas.
-- **Apresentação**: Criar slides sobre Introdução, Motivação, Desenvolvimento, Resultados, e Considerações Finais.
+- **Testes e Documentação**(à desenvolver): Criar testes de usabilidade e funcionalidade, além de documentar todo o projeto em **README.md**, seguindo boas práticas.
 
 ## 📑 Especificação de Requisitos
 
