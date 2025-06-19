@@ -17,7 +17,7 @@ NutriFácil é uma aplicação que ajuda usuários a escolher uma dieta apropria
 - **MongoDB**: Banco de dados NoSQL utilizado para armazenamento de dados.
 - **TS e Gherkin**: Para testes.
 
--** Lembre-se para rodar o projeto instalar nest e rodar o servidor e o Mongo DB**
+- **Lembre-se para rodar o projeto instalar nest e rodar o servidor e o Mongo DB**
 
 ## 📑 Especificação de Requisitos
 
