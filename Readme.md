@@ -15,6 +15,9 @@ NutriFácil é uma aplicação que ajuda usuários a escolher uma dieta apropria
 - **Node.js**: Ambiente de execução JavaScript no lado servidor e usado para API e back-end.
 - **NestJS**: Framework para construir aplicações escaláveis e eficientes, utilizando TypeScript e usado para fazer o back-end, principalmente.
 - **MongoDB**: Banco de dados NoSQL utilizado para armazenamento de dados.
+- **TS e Gherkin**: Para testes.
+
+-** Lembre-se para rodar o projeto instalar nest e rodar o servidor e o Mongo DB**
 
 ## 📑 Especificação de Requisitos
 
