@@ -236,10 +236,11 @@ button:hover {
 
 .ImagemConteudoSection {
     width: 50%;
+    height: 50%;
 }
 
 .ImagemConteudoSection img {
-    border-radius: 12px;
+    border-radius: 12px;;
     height:100%;
     width:100%;
 }

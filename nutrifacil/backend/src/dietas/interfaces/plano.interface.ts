@@ -1,3 +1,4 @@
+// src/dietas/interfaces/plano.interface.ts
 export interface PlanoAlimentar {
   tmb: number;
   imc: number;

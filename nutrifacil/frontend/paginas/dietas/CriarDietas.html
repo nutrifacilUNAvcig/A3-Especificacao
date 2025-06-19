@@ -1,79 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../estilos/CalcularMetabolismo.css">
-    <title>Criar Dieta</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Criar Dieta</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, rgb(100, 248, 201), rgb(212, 31, 236));
+      color: #000000;
+      padding: 30px;
+    }
+
+    .container {
+      background-color: #fafafa;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      text-align: center;
+      color: #000000;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+   input, select {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  background-color: #b4b4b4;
+  border: 1px solid #b8b8b8;
+  border-radius: 4px;
+  color: #000000;
+  box-sizing: border-box;
+  height: 38px;
+}
+
+
+    .btn {
+      background-color: #54c4a4;;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #54c4a4;;
+    }
+
+    .resultado {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      color: #000000;
+    }
+
+    .resultado strong {
+      color: #54c4a4;;
+    }
+  </style>
 </head>
 <body>
-      <header class="CabecalhoIndex">
-        <div class="MenuCabecalho">
-            <div class="imagemLogoCabecalho">
-                <img  onclick="window.location.href='index.html'" src="../imagens/logo.png" alt="ImagemLogo">
-            </div>
-
-            <div class="IntensCabecalhoIndex">
-                <!--<img class="ImagemCabecalhoIndex" src="../imagens/telefones.png" alt="ImagemAoLadoDoTexto">!-->
-                <a href="#">Lorem1</a>
-            </div>
-            <div class="linhaVertical"></div><!--linha -->
-            <div class="IntensCabecalhoIndex">
-                <!--<img class="ImagemCabecalhoIndex" src="../imagens/telefones.png" alt="ImagemAoLadoDoTexto">!-->
-                <a href="#">Lorem, ipsum.</a>
-            </div>
-            <div class="linhaVertical"></div><!--linha -->
-            <div class="IntensCabecalhoIndex">
-                <!--<img class="ImagemCabecalhoIndex" src="../imagens/telefones.png" alt="ImagemAoLadoDoTexto">!-->
-                <a href="#">Lorem, ipsum.</a>
-            </div>
-            <div class="linhaVertical"></div><!--linha -->
-            <div class="IntensCabecalhoIndex">
-                <!--<img class="ImagemCabecalhoIndex" src="../imagens/telefones.png" alt="ImagemAoLadoDoTexto">!-->
-                <a id="lista-ramais" href="#">Lorem, ipsum.</a>
-                <!-- Section com os ramais dentro do link --> 
-            </div>
-        </div>
-        <div class="BarraDeMenuCabecalho">
-            <p>Menu</p>
-        </div>
-    </header>
-
   <div class="container">
     <h2>Informe seus dados</h2>
+    
     <div class="form-group">
-      <label for="idade">Dieta</label>
-      <input type="" id="dieta" placeholder="Ex: (Tipo de Dieta)" required />
+      <label for="dieta">Tipo de Dieta</label>
+      <select id="dieta" required>
+        <option value="Mediterrânea">Mediterrânea</option>
+        <option value="Low Carb">Low Carb</option>
+        <option value="Cetogênica">Cetogênica</option>
+        <option value="Vegetariana">Vegetariana</option>
+      </select>
     </div>
+
     <div class="form-group">
       <label for="peso">Peso (kg)</label>
       <input type="number" id="peso" placeholder="Ex: 70" step="0.1" required />
     </div>
+
     <div class="form-group">
-      <label for="altura">Altura (m)</label>
-      <input type="number" id="altura" placeholder="Ex: 1.75" step="0.01" required />
+      <label for="altura">Altura (cm)</label>
+      <input type="number" id="altura" placeholder="Ex: 175" step="0.1" required />
     </div>
+
     <div class="form-group">
       <label for="idade">Idade</label>
-      <input type="number" id="idade" placeholder="Ex: (0 - 60+)" step="1" required />
+      <input type="number" id="idade" placeholder="Ex: 25" required />
     </div>
+
     <div class="form-group">
-      <label for="idade">sexo</label>
-      <input type="number" id="sexo" placeholder="Sexo" step="1" required />
+      <label for="sexo">Sexo</label>
+      <select id="sexo" required>
+        <option value="Masculino">Masculino</option>
+        <option value="Feminino">Feminino</option>
+      </select>
     </div>
+
     <div class="form-group">
-      <label for="idade">Objetivo</label>
-      <input type="number" id="objetivo" placeholder="emagrecer" step="1" required />
+      <label for="objetivo">Objetivo</label>
+      <select id="objetivo" required>
+        <option value="Emagrecimento">Emagrecimento</option>
+        <option value="Hipertrofia">Hipertrofia</option>
+      </select>
     </div>
+
     <div class="form-group">
-      <label for="idade">Alimentos</label>
-      <input type="number" id="alimentos" placeholder="alimentos" step="1" required />
+      <label for="alimentos">Alimentos Preferidos (opcional)</label>
+      <input type="text" id="alimentos" placeholder="Ex: frango, arroz, espinafre">
     </div>
+
     <div class="form-group">
-      <label for="idade">Alergia</label>
-      <input type="number" id="alimentos" placeholder="alimentos" step="1" required />
+      <label for="alergias">Alergias (opcional)</label>
+      <input type="text" id="alergias" placeholder="Ex: leite, glúten">
     </div>
-    <button class="btn" onclick="calcularIMC()">Gerar dieta</button>
+
+    <button class="btn" onclick="gerarDieta()">Gerar Dieta</button>
+
     <div class="resultado" id="resultado"></div>
   </div>
+
+  <script>
+    async function gerarDieta() {
+      const data = {
+        dieta: document.getElementById('dieta').value,
+        peso: parseFloat(document.getElementById('peso').value),
+        altura: parseFloat(document.getElementById('altura').value),
+        idade: parseInt(document.getElementById('idade').value),
+        sexo: document.getElementById('sexo').value,
+        objetivo: document.getElementById('objetivo').value,
+        preferencias: {
+          proteinas: [],
+          legumes: [],
+          verduras: [],
+          carboidratos: []
+        },
+        alergias: document.getElementById('alergias').value.split(',').map(a => a.trim()).filter(a => a)
+      };
+
+      const resultadoDiv = document.getElementById('resultado');
+      resultadoDiv.innerHTML = 'Gerando dieta...';
+
+      try {
+        const response = await fetch('http://localhost:3000/dietas/plano', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (!response.ok) {
+          throw new Error(`Erro: ${response.status}`);
+        }
+
+        const resultado = await response.json();
+
+        resultadoDiv.innerHTML = `
+          <strong>TMB:</strong> ${resultado.tmb} kcal<br>
+          <strong>IMC:</strong> ${resultado.imc}<br>
+          <strong>Água diária:</strong> ${resultado.aguaDiaria_ml} ml<br><br>
+          <strong>Plano Alimentar:</strong><br>
+          ${resultado.recomendacoes.refeicoes.map(ref => `
+            <div>
+              <strong>${ref.periodo}</strong>:<br>
+              ${ref.itens.map(item => `- ${item}`).join('<br>')}
+              <br><em>Calorias estimadas: ${ref.caloriasEstimadas}</em>
+            </div>
+            <br>
+          `).join('')}
+        `;
+      } catch (err) {
+        resultadoDiv.innerHTML = `Erro ao gerar dieta: ${err}`;
+      }
+    }
+  </script>
+</body>
 </html>
