@@ -76,4 +76,10 @@
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
   }
+"scripts": {
+  "test:bdd": "cucumber-js --require-module ts-node/register --require test/steps/**/*.ts test/features/**/*.feature"
+}
+
+
+
 }
